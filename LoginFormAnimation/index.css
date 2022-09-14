@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
 }
 body {
   display: flex;
@@ -15,7 +18,7 @@ body {
   position: absolute;
   width: 380px;
   height: 420px;
-  background: #23242a;
+  background: #477272;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -41,7 +44,7 @@ body {
   width: 380px;
   height: 420px;
   transform-origin: bottom right;
-  background: linear-gradient(0deg, transparent, cyan, cyan);
+  background: linear-gradient(0deg, transparent, #d445ff,#d445ff);
   animation: animate 4s linear infinite;
   animation-delay: 2s;
 }
@@ -117,5 +120,57 @@ h2 {
     background: cyan;
     border-radius: 4px;
     overflow: hidden;
-    
+    transition: 0.5s;
+    pointer-events: none;
+}
+.inputbox input:valid ~i,
+.inputbox input:focus ~i{
+    height: 44px;
+}
+
+input[type="submit"]{
+    border :none;
+    outline: none;
+    padding: 10px 25px;
+    background:cyan;
+    cursor:pointer;
+    font-weight: 600;
+    border-radius: 4px;
+    /* width: 100px; */
+    margin-top: 15px;
+    font-size: large;
+    color: rgb(165, 165, 165);
+}
+
+input[type="submit"]:active 
+{
+	opacity: 0.7;
+}
+input[type="submit"]:hover 
+{
+	background: cyan;
+}
+.link a {
+ 
+ color: #8f8f8f;
+ text-decoration: none;
+ font-size: 0.75em;
+}
+.link a:hover{
+    color: cyan;
+}
+.redirect{
+    display: flex;
+    gap: 10px;
+    font-size: 0.85em;
+    margin-top: 20px;
+    justify-content: center;
+}
+.redirect span a{
+    color: cyan;
+    text-decoration: none;
+}
+.redirect span a:hover{
+    color: greenyellow;
+    text-decoration: underline;
 }

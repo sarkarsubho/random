@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  background: black;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.box {
+  position: absolute;
+  width: 380px;
+  height: 420px;
+  background: #23242a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.box::before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, cyan, cyan);
+  animation: animate 4s linear infinite;
+}
+.box::after {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, cyan, cyan);
+  animation: animate 4s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+form {
+  position: absolute;
+  inset: 2px;
+  background: #23242a;
+  z-index: 2;
+  border-radius: 8px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  color: cyan;
+  font-weight: 520;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.inputbox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+.inputbox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  background: transparent;
+  z-index: 10;
+}
+.inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    pointer-events: none;
+    font-size:  1em;
+    color:#8f8f8f;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputbox input:valid ~span,
+.inputbox input:focus ~span{
+    color: cyan;
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+}
+.inputbox i
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: cyan;
+    border-radius: 4px;
+    overflow: hidden;
+    
+}

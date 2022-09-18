@@ -136,10 +136,10 @@ input[type="submit"]{
     cursor:pointer;
     font-weight: 600;
     border-radius: 4px;
-    /* width: 100px; */
+    
     margin-top: 15px;
     font-size: large;
-    color: rgb(165, 165, 165);
+    
 }
 
 input[type="submit"]:active 
@@ -148,7 +148,8 @@ input[type="submit"]:active
 }
 input[type="submit"]:hover 
 {
-	background: cyan;
+	background: rgb(1, 221, 221);
+  transition: 0.3s;
 }
 .link a {
  

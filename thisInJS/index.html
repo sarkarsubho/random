@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        goto console to see the this keyord presentation
+    </h1>
+    <!-- can write in pre tag or give the style style="display: block;
+    white-space: pre-wrap;" both will work on display the code as look like real code inditation -->
+    <!-- 
+Coder's Gyan
+Coder's Gyan
+5 days ago
+Snazzy operator theme with Victor mono font 😊
+ -->
+    <pre>
+         <code style="display: block;
+         white-space: pre-wrap;">
+       // it Totally depends on how you call it.
+       function login(){
+          console.log(this)
+      }
+  login(); //global obj
+  new login(); // now it represente the login function
+
+
+  let obj={
+      login(){
+          console.log(this)
+      }
+  }
+   obj.login() //represents the login function
+   let loguser=obj.login;
+   loguser(); // represente the global obj
+
+  let obj2={
+      login:()=>{
+          console.log(this)
+      }
+  }
+  obj2.login()
+
+  outut
+  window
+  login
+  login
+  window
+  window
+    </code>
+    </pre>
+   
+    
+    <script>
+        function login(){
+            console.log(this)
+        }
+    login(); //global obj
+    new login(); // now it represente the login function
+
+
+    let obj={
+        login(){
+            console.log(this)
+        }
+    }
+     obj.login() //represents the login function
+     let loguser=obj.login;
+     loguser(); // represente the global obj
+
+    let obj2={
+        login:()=>{
+            console.log(this)
+        }
+    }
+    obj2.login()
+    </script>
+</body>
+</html>

@@ -12,6 +12,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background: black; */
 }
 
 section::before{
@@ -34,11 +35,14 @@ section img {
     object-fit: cover;
     pointer-events: none;
 }
-
+section img#man{
+    transform-origin: bottom;
+}
 #text {
     position: relative; 
     color: #fff;
-    font-size: 10vw;
+    font-size: 8vw;
+    color: rgb(167, 220, 255);
 
 }
 .sec{

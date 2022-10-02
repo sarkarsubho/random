@@ -1,0 +1,42 @@
+.box{
+    height: 80px;
+    width: 80px;
+    border: 1px solid red;
+    margin-left: 10px;
+    display: inline-block;
+
+}
+#parent{
+    background: yellowgreen;
+    padding: 10px;
+    height: 200vh;
+}
+#childDiv3{
+    position:sticky;
+    /* top: 20px; */
+    right: 20px;
+    left: 20px;
+    bottom: 10px;
+}
+/* 
+position: static // it is by default
+
+position : relative
+relative to its actual posation
+
+podation : absolute
+relative to its first parent
+
+posation : fixed;
+
+relative to the window size;
+where ever you want to put it will be fixed
+
+position : sticky;
+position relative to its actual position 
+Only accept the top attribute
+it will sticked to it's actual position even on scroll 
+it will not go up of the parent where its belong.
+
+
+*/

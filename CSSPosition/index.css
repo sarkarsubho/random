@@ -10,6 +10,7 @@
     background: yellowgreen;
     padding: 10px;
     height: 200vh;
+    border-bottom: 5px solid black;
 }
 #childDiv3{
     position:sticky;
@@ -17,6 +18,10 @@
     right: 20px;
     left: 20px;
     bottom: 10px;
+}
+#myimg{
+    filter: drop-shadow(230px 0px 5px red);
+    /* box-shadow: 8px 8px 8px red ; */
 }
 /* 
 position: static // it is by default

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Introducing Coustome Promise</h1>
+    <div id="home"></div>
+
+    <script>
+      let cart = ["shirt", "kurta", "pajama"];
+      let WaletBalance = 500;
+      // createOrder,proceedToPayment,ShoworderSammary ,updateWaletBallence
+
+      let home = document.getElementById("home");
+      cart.forEach((item, index) => {
+        let div = document.createElement("div");
+        let p = document.createElement("p");
+        p.textContent = `${index}- ${item}`;
+        let Button = document.createElement("button");
+        Button.textContent = "Bye Now";
+        Button.addEventListener("click", () => {
+          // async Promises
+
+          // Promise Chaning
+
+          createOrder(item, index)
+            .then((orderid) => {
+              console.log(`Order Created ID -${orderid}`);
+              return orderid;
+            })
+            .catch((er) => {
+              console.log(er);
+            })
+            .then((orderid) => {
+              console.log("Proceeding to Payment...");
+              return proceedToPayment(orderid);
+            })
+            .catch((er) => {
+              console.log(er);
+            })
+            .then((orderSummary) => {
+              console.log("showing Order Summary");
+              return ShoworderSammary(orderSummary);
+            })
+            .catch((er) => console.log(er))
+            .then((price) => {
+              console.log("Updating Walet Baalance...");
+              return updateWaletBallence(price);
+            })
+            .then((bal) => {
+              alert(`Current WaletBalance is :- ${bal}`);
+            })
+            .catch((er) => {
+              console.log(er);
+            })
+            .then((res) => console.log("All Done"));
+        });
+        div.append(p, Button);
+        home.append(div);
+      });
+
+      // Create Order
+
+      function createOrder(item, index) {
+        console.log("Creating Order...")
+        const pr = new Promise(function (resolve, reject) {
+          if (index > 2) {
+            reject("item is not valid");
+          }
+          let orderid = index + "abc";
+          setTimeout(() => {
+            resolve(orderid);
+          }, 3000);
+        });
+        return pr;
+      }
+
+      // Proceed TO Payment
+
+      function proceedToPayment(orderid) {
+        const pr = new Promise(function (resolve, reject) {
+          if (!orderid) {
+            reject("order is not proccied because of payment !");
+          }
+
+          let tmp = {
+            orderid: orderid,
+            price: 201,
+            paymentStatus: true,
+          };
+          setTimeout(() => {
+            resolve(tmp);
+          }, 4000);
+        });
+        return pr;
+      }
+
+      // Showing Order Summary
+
+      function ShoworderSammary(orderSummary) {
+        let pr = new Promise((resolve, reject) => {
+          if (!orderSummary) {
+            reject(" Order not been Processed");
+          }
+
+          setTimeout(() => {
+            alert(`
+            orderid: ${orderSummary.orderid},
+            price: ${orderSummary.price},
+            paymentStatus: ${
+              orderSummary.paymentStatus ? "Done" : "Not Done"
+            }`);
+            resolve(orderSummary.price);
+          }, 3000);
+        });
+
+        return pr;
+      }
+
+      // Updating Balance
+
+      function updateWaletBallence(price) {
+        const pr = new Promise(function (resolve, reject) {
+          if (price < 1) {
+            reject("Amount is not Valid");
+          } else if (WaletBalance < price) {
+            reject("Balance is not Sufficient to Buy the Product");
+          }
+          WaletBalance = WaletBalance - price;
+          setTimeout(() => {
+            resolve(WaletBalance);
+          }, 5000);
+        });
+        return pr;
+      }
+
+    </script>
+  </body>
+</html>

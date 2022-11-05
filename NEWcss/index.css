@@ -1,0 +1,106 @@
+#range{
+    width: 500px;
+    color: #000;
+}
+input[type=range] {
+    height: 38px;
+    /* -webkit-appearance: none; */
+    margin: 10px 0;
+    width: 100%;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+.play {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid #555;
+  border-bottom: 25px solid transparent;
+}
+#egg {
+  display: block;
+  width: 120px;
+  height: 180px;
+  background-color: red;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+#infinite {
+  position: relative;
+  width: 212px;
+  height: 100px;
+  box-sizing: border-box;
+}
+#infinite::before,
+#infinite::after {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 20px solid black;
+  top: 0;
+  left: 0;
+  border-radius: 50px 50px 0 50px;
+  transform: rotate(-45deg);
+}
+#infinite::after {
+  left: auto;
+  right: 0;
+  border-radius: 50px 50px 50px 0;
+  transform: rotate(45deg);
+}
+
+#uptriangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #000;
+  border-radius: 50px 50% 5px 5px;
+}
+#dimond{
+    width: 80px;
+    height: 0px;
+    border: 40px solid transparent;
+    border-bottom: 50px solid black;
+    position: relative;
+    top:0px;
+
+}
+#dimond::after{
+    content: "";
+    position: absolute;
+    left: auto;
+    top: 50px;
+    width: 100px;
+
+    border: 40px solid transparent;
+    border-top: 90px solid red;
+}
+#love {
+    margin-top: 100px;
+  position: relative;
+  width: 100px;
+  height: 90px;
+  border: 2px solid green;
+  padding: 10px;
+}
+#love::before,
+#love::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 50px;
+  width: 50px;
+  height: 80px;
+  background: red;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+#love::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}

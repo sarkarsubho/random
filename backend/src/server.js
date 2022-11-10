@@ -5,7 +5,7 @@ dotenv.config();
 const port =process.env.PORT
 
 
-app.listen(5050,async()=>{
+app.listen(port,async()=>{
     try{
       await  connect();
      return console.log(`it is connect on ${port} `)

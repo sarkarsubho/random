@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js
+    "></script>
+  </head>
+  <body>
+    <ul>
+      <li class="child1">hello world</li>
+      <li class="child2">hello world</li>
+      <li class="child3">hello world</li>
+      <li class="child4">hello world</li>
+      <li class="child5">hello world</li>
+      <li class="child6">hello world</li>
+      <li class="child7">hello world</li>
+      <li class="child8">hello world</li>
+    </ul>
+    <div id="show"></div>
+    <input type="text" id="input"/>
+    <button id="button">submit</button>
+
+    <script>
+      // jQuarry
+      $("ul li:nth-child(even)").css({
+        color: "red",
+        fontSize: "40px",
+        listStyle: "none",
+      });
+      // $("#show").hover(function () {
+      //   console.log("hovered");
+      //   $(".child1").css("color", "red");
+      // });
+    $(".child2").on("mouseenter",function(){
+      console.log("mouse Entered")
+      $(".child2").css("color","black")
+    })
+    $("#button").on("click",function(){
+      $(".child2").empty();
+    })
+    $("#input").on("change",function(e){
+
+      // let val=e.target.value;
+      // alert(val)
+      console.log($("#input").val())
+    })
+    $("ul").wrap("<i>")
+    </script>
+
+    <script>
+      // ajax request
+      window.addEventListener("load", () => {
+        getUsers();
+      });
+      function getUsers() {
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "https://api.github.com/users", true);
+
+        xhr.onload = function () {
+          let user = JSON.parse(this.responseText);
+          console.log("api called ", user);
+
+          var output = "";
+          for (let i = 0; i < user.length; i++) {
+            output +=
+              '<img src="' + user[i].avatar_url + '" width="70" height="70">';
+          }
+          document.getElementById("show").innerHTML = output;
+        };
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>

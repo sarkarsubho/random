@@ -13,15 +13,21 @@
     border-bottom: 5px solid black;
 }
 #childDiv3{
-    position:sticky;
+    position:absolute;
     /* top: 20px; */
     right: 20px;
     left: 20px;
     bottom: 10px;
 }
 #myimg{
-    filter: drop-shadow(230px 0px 5px red);
-    /* box-shadow: 8px 8px 8px red ; */
+    /* filter: drop-shadow(10px 0px 5px red); */
+    box-shadow: 8px 8px 8px red ;
+}
+
+.marquee img{
+    margin-left: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(10px 0px 5px red);
 }
 /* 
 position: static // it is by default

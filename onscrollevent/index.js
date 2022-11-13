@@ -12,6 +12,7 @@ function reveal() {
         reveals[i].classList.remove("active");
       }
     }
+    console.log(windowHeight)
     
      for (var j = 0; j < revealsp.length; j++) {
       var windowHeight = window.innerHeight;

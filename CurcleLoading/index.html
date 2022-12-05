@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loading...</title>
+    <style>
+        /* body{
+            margin: 0;
+            padding: 0;
+            background-color: #34495e;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        } */
+        body{
+            background-color:#34495e ;
+            font-size: xx-large;
+        }
+        .loading{
+            width: 200px;
+            height: 200px;
+            /* background: red; */
+            box-sizing: border-box;
+            border-radius: 50%;
+            border-top: 10px solid #e74c3c; 
+            color: white;
+            position: relative;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: a1 2s linear infinite;
+        }
+        .loading::before,.loading::after{
+            content: "";
+            width: 200px;
+            height: 200px;
+            /* background: red; */
+            position: absolute;
+            left: 0;
+            top:-10px;
+            box-sizing: border-box;
+            border-radius: 50%;
+        }
+        .loading::after{
+            border-top: 10px solid #3498db;
+            transform: rotate(240deg);
+        }
+        .loading::before{
+            border-top: 10px solid #e67e22;
+            transform: rotate(120deg);
+        }
+        .loading span{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 0;
+            left: 0;
+            text-align: center;
+            line-height:200px;
+            animation: a2 2s linear infinite;
+            font-size: xx-large;
+        }
+        @keyframes a1{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes a2{
+            to{
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="loading">
+        <span> Loading.... </span>
+    </div>
+    <script type="text/javascript">
+        function download() {
+            var a = document.body.appendChild(
+               document.createElement("a")
+            );
+           a.download = "newfile.html";
+           a.href = "data:text/html," + document.getElementById("content").innerHTML;
+           a.click(); //Trigger a click on the element
+        }
+    </script>
+
+<div style="border: 1px solid #357ae8; width: 500px; height: 350px">
+        <div id="content">
+            <h1 style="color: #3d75bd;">Dear user download me....</h1>
+            <i>click below download button</i>
+        </div>
+        <button onclick="download()">Download</button>
+    </div> 
+  </body>
+</html>

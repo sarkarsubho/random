@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown</title>
+    <style>
+      .nav {
+        border: 2px solid;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .dropdownContent {
+        display: none;
+        position: absolute;
+        padding: 10px;
+        border: 2px solid gray;
+        width: fit-content;
+        border-radius: 5px;
+        margin-top: 5px;
+        background-color: bisque;
+        z-index: 10;
+        opacity: 0.1;
+        transition: opacity 2s, transform 2s;
+      }
+      .dropdownContent a {
+        display: block;
+        text-decoration: none;
+      }
+      .dropDown:hover .dropdownContent {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="nav">
+        <div class="dropDown">
+          <button class="dropDownButton">Menu</button>
+          <div class="dropdownContent">
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+          </div>
+        </div>
+        <div class="dropDown">
+          <button class="dropDownButton">Menu</button>
+          <div class="dropdownContent">
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+          </div>
+        </div>
+        <div class="dropDown">
+          <button class="dropDownButton">Menu</button>
+          <div class="dropdownContent">
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+          </div>
+        </div>
+        <div class="dropDown">
+          <button class="dropDownButton">Menu</button>
+          <div class="dropdownContent">
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+            <a href="">manu Content</a>
+          </div>
+        </div>
+      </div>
+      <!-- <input type="text" x-webkit-speech /> -->
+    </div>
+  </body>
+</html>

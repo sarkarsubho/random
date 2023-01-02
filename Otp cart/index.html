@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="otp1">Enter OTP:</label><br />
+      <input
+        type="text"
+        id="otp1"
+        name="otp1"
+        pattern="[0-9]{1}"
+        maxlength="1"
+        oninput="focusNext(this)"
+        onkeyup="focusPrev(event, this)"
+      />
+      <input
+        type="text"
+        id="otp2"
+        name="otp2"
+        pattern="[0-9]{1}"
+        maxlength="1"
+        oninput="focusNext(this)"
+        onkeyup="focusPrev(event, this)"
+      />
+      <input
+        type="text"
+        id="otp3"
+        name="otp3"
+        pattern="[0-9]{1}"
+        maxlength="1"
+        oninput="focusNext(this)"
+        onkeyup="focusPrev(event, this)"
+      />
+      <input
+        type="text"
+        id="otp4"
+        name="otp4"
+        pattern="[0-9]{1}"
+        maxlength="1"
+        oninput="focusNext(this)"
+        onkeyup="focusPrev(event, this)"
+      />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      //   function focusNext(input) {
+
+      //     // console.log(event,input)&& input.value === ''
+
+      //   }
+
+      function focusPrev(event, input) {
+        console.log(input, event);
+        if (event.keyCode === 8) {
+          input.previousElementSibling.focus();
+        } else {
+          event.target.id !== "otp4" && input.nextElementSibling.focus();
+        }
+      }
+    </script>
+  </body>
+</html>

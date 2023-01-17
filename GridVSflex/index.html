@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+           grid-template-areas:
+         "  nav nav nav"
+           "sidebar main main"
+          " footer footer footer"
+           ;
+            
+
+        }
+        .container>div{
+            border: 1px solid red;
+        }
+.nav{
+    grid-area: nav;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.footer{
+    grid-area: footer;
+}
+.main{
+    grid-area: main;
+}
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="nav" >childrens</div>
+        <div class="sidebar">childrens</div>
+        <div class="main">childrens</div>
+        <div  class="footer">childrens</div>
+      
+
+    </div>
+    
+</body>
+</html>

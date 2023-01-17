@@ -16,7 +16,7 @@ body {
 }
 .box {
   position: absolute;
-  width: 380px;
+  width: 300px;
   height: 420px;
   background: #4d4e4e;
   border-radius: 8px;
@@ -76,7 +76,7 @@ h2 {
 }
 .inputbox {
   position: relative;
-  width: 300px;
+  width: 250px;
   margin-top: 35px;
 }
 .inputbox input {

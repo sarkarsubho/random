@@ -6,17 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .flex{
-            /* display: flex; */
-        }
-        .grid{
-            /* display: grid; */
-        }
+      /* .flex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .flex>*{
+        flex-grow:1
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+      }
 
-        .flex>*,.grid>*{
-            border: 1px solid;
-        }
-  
+      .flex > *,
+      .grid > * {
+        border: 1px solid;
+      } */
+
+
+
+      
+      /* 2nd */
+      .main{
+        /* display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px; */
+
+        /* display: flex;
+        gap: 10px; */
+      }
+
+      .child{
+        /* background-color: teal;
+        padding: 10px; */
+        
+      }
+      .tags{
+         /* list-style: none;  */
+        /*display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center; */
+      }
+      .tag{
+        /* padding: 5px;
+        background-color: aquamarine; */
+      }
+      /* 3rd */
+      /* .nav{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 100px auto 100px;
+      } */
     </style>
   </head>
   <body>
@@ -29,7 +72,7 @@
         <div>Lorem ipsum dolor sit amet consectetur.</div>
         <div>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
-          autem debitis reiciendis distinctio!
+          autem
         </div>
         <div>Lorem, ipsum dolor.</div>
       </div>
@@ -41,10 +84,69 @@
         <div>Lorem ipsum dolor sit amet consectetur.</div>
         <div>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
-          autem debitis reiciendis distinctio!
+          autem
         </div>
         <div>Lorem, ipsum dolor.</div>
       </div>
+    </div>
+
+    <!-- flex with greed -->
+    <!-- <div class="main">
+      <div class="child">
+        <h3>heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+          laborum.
+        </p>
+        <ul class="tags">
+          <li class="tag">tags</li>
+          <li class="tag">tags</li>
+          <li class="tag">tags</li>
+        </ul>
+      </div>
+      <div class="child">
+        <h3>heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+          laborum.
+        </p>
+        <ul class="tags">
+          <li class="tag">tags</li>
+          <li class="tag">tags</li>
+          <li class="tag">tags</li>
+        </ul>
+      </div>
+      <div  class="child">
+        <h3>heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+          laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Provident voluptas deserunt esse amet. Ex dolorem quod aliquam dolorum
+          dolore minima, ullam, ratione architecto quidem distinctio earum eos
+          vitae perferendis temporibus.
+        </p>
+        <ul class="tags">
+          <li class="tag">tags</li>
+          <li class="tag">tags</li>
+          <li class="tag">tags</li>
+          <li class="tag">tags</li>
+          <li class="tag">tags</li>
+        </ul>
+      </div> -->
+
+      <!-- Navbar -->
+      <!-- <div class="nav">
+        <h1>LOGO</h1>
+         <div class="tags">
+            <li class="tag">tags</li>
+            <li class="tag">tags</li>
+            <li class="tag">tags</li>
+            <li class="tag">tags</li>
+            <li class="tag">tags</li>
+            <li class="tag">tags</li>
+         </div>
+         <div class="account">Account</div>
+      </div> -->
     </div>
   </body>
 </html>

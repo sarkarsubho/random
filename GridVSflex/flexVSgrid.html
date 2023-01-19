@@ -6,65 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      /* .flex {
+      .flex {
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
+        /* flex-direction: column; */
+        
       }
-      .flex>*{
-        flex-grow:1
-      }
+      
       .grid {
         display: grid;
+        /* grid-auto-flow: column; */
+
         grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+        
+      }
+      .flex>*{
+     flex-grow: 1;
       }
 
       .flex > *,
       .grid > * {
         border: 1px solid;
-      } */
+      }
 
 
 
-      
+
       /* 2nd */
       .main{
-        /* display: grid;
-        grid-auto-flow: column;
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px; */
+       
 
-        /* display: flex;
-        gap: 10px; */
+        /* display: flex; */
+        gap: 10px;
       }
 
       .child{
-        /* background-color: teal;
-        padding: 10px; */
-        
+        background-color: teal;
+        padding: 10px;
+        flex: 1;
       }
       .tags{
-         /* list-style: none;  */
-        /*display: flex;
+        /* background: green; */
+        display: flex;
+        list-style: none;
         gap: 10px;
-        justify-content: center;
-        align-items: center; */
       }
       .tag{
-        /* padding: 5px;
-        background-color: aquamarine; */
+        padding: 5px;
+        background-color: aquamarine;
       }
       /* 3rd */
-      /* .nav{
+      .nav{
         display: grid;
         align-items: center;
         grid-template-columns: 100px auto 100px;
-      } */
+      }
     </style>
   </head>
   <body>
     <div>
-      <h3>Flex</h3>
+      <!-- <h3>Flex</h3>
       <div class="flex">
         <div>this</div>
         <div>Lorem,ipsum dolor sit amet consectetur adipisicing elit.</div>
@@ -88,10 +91,10 @@
         </div>
         <div>Lorem, ipsum dolor.</div>
       </div>
-    </div>
+    </div> -->
 
     <!-- flex with greed -->
-    <!-- <div class="main">
+    <div class="main">
       <div class="child">
         <h3>heading</h3>
         <p>
@@ -132,7 +135,7 @@
           <li class="tag">tags</li>
           <li class="tag">tags</li>
         </ul>
-      </div> -->
+      </div>
 
       <!-- Navbar -->
       <!-- <div class="nav">

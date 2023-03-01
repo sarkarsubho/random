@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        background-color: teal;
+        list-style: none;
+        max-width: fit-content;
+        padding: 5px;
+        margin: 8px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: aliceblue;
+        font-size: 17px;
+        font-weight: 500;
+      }
+
+      li:active {
+        opacity: 0.6;
+      }
+      #container {
+        display: flex;
+        border: 2px solid lightblue;
+        border-radius: 5px;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+      }
+      ul {
+        background-color: antiquewhite;
+        height: 100%;
+        width: 50%;
+        margin: 0;
+        
+      }
+
+      #details {
+        background-color: beige;
+        width: 50%;
+        padding: 20px;
+        border-left: 2px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nodejs - File Server</h1>
+    <div id="push"></div>
+    <div id="container">
+      <ul id="list"></ul>
+      <div id="details"> Details will be appear here</div>
+    </div>
+  </body>
+  <script>
+    async function getDetails(params) {
+      let data = await fetch(`http://localhost:8080/${params}`);
+      data = await data.json();
+      console.log(data);
+      let dtlBox=document.getElementById("details");
+      dtlBox.textContent=data
+    }
+
+    async function getData() {
+      let data = await fetch(`http://localhost:8080`);
+      data = await data.json();
+      console.log(data);
+      let list = document.getElementById("list");
+      data.map((e) => {
+        let li = document.createElement("li");
+        li.innerHTML = e;
+        li.addEventListener("click", () => {
+          getDetails(e);
+        });
+        list.append(li);
+      });
+    }
+    getData();
+    document.getElementById("push").innerHTML="<h1>okok</h1>";
+
+  </script>
+</html>

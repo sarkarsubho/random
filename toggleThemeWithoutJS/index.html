@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #707070;
+        transition: background-color 0.5s, color 0.5s;
+      }
+      main {
+        width: 100vw;
+        height: 100vh;
+        color: #fff;
+        position: fixed;
+        padding-top: 50px;
+        padding-left: 30px;
+        top: 0;
+        z-index: -10;
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+      input[type="checkbox"] + label {
+        margin: 10px 10px 0 0;
+        float: right;
+      }
+
+      input[type="checkbox"]:checked + label {
+        background-color: #333;
+        color: #fff;
+      }
+
+      label {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #fff;
+        color: #333;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      /* Dark mode styles */
+      input[type="checkbox"]:checked + label {
+        background-color: #333;
+        color: #fff;
+      }
+
+      input[type="checkbox"]:checked + label::before {
+        content: "\2600"; /* Unicode character for sun */
+      }
+
+      input[type="checkbox"],
+      main {
+        /* content: '\2600'; Unicode character for sun */
+        background-color: rgb(79, 79, 79);
+      }
+      input[type="checkbox"]:checked ~ main {
+        /* content: '\2600'; Unicode character for sun */
+        background-color: rgb(244, 244, 244);
+        color: black;
+      }
+
+      input[type="checkbox"] + label::before {
+        content: "\1F319"; /* Unicode character for crescent moon */
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="darkModeToggle" />
+    <label for="darkModeToggle"></label>
+    <main>
+      <h1>This is some example text on the page.</h1>
+      <h2>This is the main content.</h2>
+    </main>
+  </body>
+</html>

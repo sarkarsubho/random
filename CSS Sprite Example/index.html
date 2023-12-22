@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Sprite Example</title>
+    <style>
+      .icon {
+        display: inline-block;
+        width: 10px;
+        height: 20px;
+        background-image: url("https://i.redd.it/092d9jxwcbq81.png");
+        background-size:cover;
+      }
+
+      .icon-home {
+        background-position: 0px 0; /* Adjust these values to display the desired image */
+      }
+
+      .icon-mail {
+        background-position: -12px 0; /* Adjust these values to display the desired image */
+      }
+      .icon-option {
+        background-position: -25px 0; /* Adjust these values to display the desired image */
+      }
+      .icon-call {
+        background-position: -38px 0; /* Adjust these values to display the desired image */
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><span class="icon icon-home"></span> Home</li>
+      <li><span class="icon icon-mail"></span> Mail</li>
+      <li><span class="icon icon-option"></span> Option</li>
+      <li><span class="icon icon-call"></span> Call</li>
+      <!-- Add more list items with different icons as needed -->
+      <!-- 
+        here in CSS Sprite Example means that there is one image for for every icon but there are fore character in the picture we are using every character as a icon so that instead of using the four icon and make network request for them only make one request 
+       -->
+    </ul>
+  </body>
+</html>
